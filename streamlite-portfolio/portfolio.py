@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import base64
 from io import BytesIO
+import os
 
 # Function to convert image to base64
 def get_base64_image(image_path):
