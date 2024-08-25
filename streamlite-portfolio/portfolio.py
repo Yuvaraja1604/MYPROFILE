@@ -9,11 +9,11 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 # Path to your background image
-background_image_path = r"C:/Users/Yuvaraj/Downloads/probg3.avif"
+background_image_path = r"probg3.avif"
 background_image_base64 = get_base64_image(background_image_path)
 
 # Path to your profile image
-profile_image_path = r"C:/Users/Yuvaraj/OneDrive/Desktop/personal/Profile pics.jpg"
+profile_image_path = r"Profile pics.jpg"
 profile_image_base64 = get_base64_image(profile_image_path)
 
 # Inject custom CSS with Streamlit
