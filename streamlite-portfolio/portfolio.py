@@ -2,23 +2,28 @@ import streamlit as st
 from PIL import Image
 import base64
 from io import BytesIO
-import os
+import requests
 
 # Function to convert image to base64
-def get_base64_image(image_path):
-    with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode()
+def get_base64_image(image_path_or_url):
+    if image_path_or_url.startswith('http://') or image_path_or_url.startswith('https://'):
+        response = requests.get(image_path_or_url)
+        if response.status_code == 200:
+            return base64.b64encode(response.content).decode()
+        else:
+            raise ValueError("Failed to fetch image from URL.")
+    else:
+        with open(image_path_or_url, "rb") as img_file:
+            return base64.b64encode(img_file.read()).decode()
 
-
-current_dir = os.getcwd()
 
 # Path to your background image
-background_image_path = os.path.join(current_dir, "probg3.avif")
-# Path to your background image
+background_image_path = r"https://raw.githubusercontent.com/Yuvaraja1604/MYPROFILE/main/streamlite-portfolio/probg3.avif"
 background_image_base64 = get_base64_image(background_image_path)
 
 # Path to your profile image
-profile_image_path = os.path.join(current_dir, "Profile pics.jpg")
+# Path to your profile image (use the raw URL)
+profile_image_path = r"https://raw.githubusercontent.com/Yuvaraja1604/MYPROFILE/main/streamlite-portfolio/Profile%20pics.jpg"
 profile_image_base64 = get_base64_image(profile_image_path)
 
 # Inject custom CSS with Streamlit
