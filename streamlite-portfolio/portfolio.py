@@ -3,6 +3,7 @@ from PIL import Image
 import base64
 from io import BytesIO
 import requests
+import webbrowser
 
 # Function to convert image to base64
 def get_base64_image(image_path_or_url):
@@ -114,7 +115,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.subheader("Project 1: Climate change Monitoring and Analysis ")
+st.markdown(
+    f"""
+    <div class="profile-container">
+        <div class="profile-text3">
+            <h3 style="color: #FFFFFF;">Project 1: Climate change Monitoring and Analysis</h3>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown(
     f"""
     <div class="profile-container">
@@ -133,7 +144,16 @@ visualization, prediction tools, and news alerts.</p>
 st.write("""
          [GitHub link](https://github.com/Yuvaraja1604/climate-change-Monitoring-and-Analysis)
 """)
-st.subheader("Project 2: Hotel Room Booking System ")
+st.markdown(
+    f"""
+    <div class="profile-container">
+        <div class="profile-text3">
+            <h3 style="color: #FFFFFF;">Project 2: Hotel Room Booking System</h3>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 st.markdown(
     f"""
     <div class="profile-container">
@@ -170,11 +190,11 @@ st.markdown(
     """
     <div style="font-size: 18px;">
         <ul>
-            <li><strong style="color: #FFA07A;">Programming Languages</strong>:Python, Java, C++, SQL</li>
-            <li><strong style="color: #87CEFA;">Libraries/Tools</strong>: Pandas, NumPy, Scikit-Learn, TensorFlow</li>
-            <li><strong style="color: #98FB98;">Front-End/Tools</strong>: HTML, CSS, Bootstrap, JavaScript</li>
-            <li><strong style="color: #FFD700;">Back-End/Tools</strong>: Django Framework</li>
-            <li><strong style="color: #FF6347;">Others</strong>: Data Visualization, Statistical Analysis, Machine Learning</li>
+            <li><strong style="color: #FFA07A;">Programming Languages</strong>: <strong style="color: #FFFFFF;">Python, Java, C++, SQL</strong></li>
+            <li><strong style="color: #87CEFA;">Libraries/Tools</strong>: <strong style="color: #FFFFFF;">Pandas, NumPy, Scikit-Learn, TensorFlow</strong></li>
+            <li><strong style="color: #98FB98;">Front-End/Tools</strong>: <strong style="color: #FFFFFF;">HTML, CSS, Bootstrap, JavaScript</strong></li>
+            <li><strong style="color: #FFD700;">Back-End/Tools</strong>: <strong style="color: #FFFFFF;">Django Framework</strong></li>
+            <li><strong style="color: #FF6347;">Others</strong>: <strong style="color: #FFFFFF;">Data Visualization, Statistical Analysis, Machine Learning</strong></li>
         </ul>
     </div>
     """,
@@ -193,8 +213,11 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.write("""
-Feel free to reach out to me:
-- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/yuvarajasimha-reddy-chitta-49463524b)
-- **GitHub**: [GitHub Profile](https://github.com/Yuvaraja1604)
-""")
+# Button to open GitHub link
+if st.button('Visit My GitHub'):
+    webbrowser.open_new_tab('https://github.com/Yuvaraja1604')
+
+# Button to open LinkedIn link
+if st.button('Visit My LinkedIn'):
+    webbrowser.open_new_tab('https://www.linkedin.com/in/yuvarajasimha-reddy-chitta-49463524b')
+
