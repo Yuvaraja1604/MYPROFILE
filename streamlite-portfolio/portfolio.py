@@ -54,6 +54,9 @@ st.markdown(
     .header-text {{
         color: #FFFF00; /* Change this color to your preference */
     }}
+    .header-text1 {{
+        color:#FFA07A; /* Change this color to your preference */
+    }}
     .profile-text1 {{
         max-width: 600px;
         color: #FF00FF;
@@ -86,11 +89,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Section: Internship
-st.header("Internship")
 st.markdown(
     f"""
     <div class="profile-container">
         <div class="profile-text3">
+            <h1 class="header-text1">Internship</h1>
             <h4 class="header-text">Intern At Andhra Pradesh State Skill Development Corporation (APSSDC)</h4>
             <p>Developed a Room Booking System project and Online Voting System project using Django for the back-end, HTML, CSS, and Bootstrap for the front end, and SQLite for database management. Gained hands on experience in full-stack development and efficient data handling.</p>
         </div>
@@ -100,7 +103,17 @@ st.markdown(
 )
 
 # section: PROJECTS
-st.header("PROJECTS")
+st.markdown(
+    f"""
+    <div class="profile-container">
+        <div class="profile-text3">
+            <h1 class="header-text">PROJECTS</h1>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 st.subheader("Project 1: Climate change Monitoring and Analysis ")
 st.markdown(
     f"""
@@ -142,17 +155,44 @@ st.write("""
 
 
 # Section: Skills
-st.header("Skills")
-st.write("""
-- **Programming Languages**: Python, Java, C++, SQL
-- **Libraries/Tools**: Pandas, NumPy, Scikit-Learn, TensorFlow
-- **Front-End/Tools**:  HTML, CSS,Bootstrap,Javascript
-- **Back-End/Tools**:   Django Framework
-- **Others**: Data Visualization, Statistical Analysis, Machine Learning
-""") 
+st.markdown(
+    f"""
+    <div class="profile-container">
+        <div class="profile-text3">
+            <h1 class="header-text1">Skills</h1>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+# Using HTML and CSS to add colors
+st.markdown(
+    """
+    <div style="font-size: 18px;">
+        <ul>
+            <li><strong style="color: #FFA07A;">Programming Languages</strong>:Python, Java, C++, SQL</li>
+            <li><strong style="color: #87CEFA;">Libraries/Tools</strong>: Pandas, NumPy, Scikit-Learn, TensorFlow</li>
+            <li><strong style="color: #98FB98;">Front-End/Tools</strong>: HTML, CSS, Bootstrap, JavaScript</li>
+            <li><strong style="color: #FFD700;">Back-End/Tools</strong>: Django Framework</li>
+            <li><strong style="color: #FF6347;">Others</strong>: Data Visualization, Statistical Analysis, Machine Learning</li>
+        </ul>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # Section: Contact
-st.header("Contact")
+st.markdown(
+    f"""
+    <div class="profile-container">
+        <div class="profile-text3">
+            <h1 class="header-text">Contact</h1>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 st.write("""
 Feel free to reach out to me:
 - **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/yuvarajasimha-reddy-chitta-49463524b)
